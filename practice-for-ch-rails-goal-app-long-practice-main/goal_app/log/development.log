@@ -83,3 +83,136 @@ ArgumentError - Range unspecified. Specify the :in, :within, :maximum, :minimum,
   app/controllers/users_controller.rb:1:in `<top (required)>'
 
 Started POST "/__better_errors/8686d99d54c4c51f/variables" for ::1 at 2023-10-04 15:45:06 -0400
+Started GET "/users" for ::1 at 2023-10-04 16:13:04 -0400
+
+ArgumentError - Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.:
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/58d705ef15de20db/variables" for ::1 at 2023-10-04 16:13:05 -0400
+Started GET "/users" for ::1 at 2023-10-04 16:13:05 -0400
+
+ArgumentError - Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.:
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/d107c86b4b1417a4/variables" for ::1 at 2023-10-04 16:13:05 -0400
+Started GET "/users" for ::1 at 2023-10-04 16:15:07 -0400
+
+NoMethodError - undefined method `action_encoding_template' for UsersController:Class:
+
+Started POST "/__better_errors/701b7803352b7d41/variables" for ::1 at 2023-10-04 16:15:08 -0400
+Started POST "/__better_errors/701b7803352b7d41/variables" for ::1 at 2023-10-04 16:15:20 -0400
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jacob"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "jacob"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-10-04 20:16:41.877399"], ["updated_at", "2023-10-04 20:16:41.877399"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users" for ::1 at 2023-10-04 16:16:45 -0400
+
+NoMethodError - undefined method `action_encoding_template' for UsersController:Class:
+
+Started POST "/__better_errors/badc3735e4ff6f26/variables" for ::1 at 2023-10-04 16:16:46 -0400
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/users" for ::1 at 2023-10-04 16:17:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+NoMethodError - undefined method `action_encoding_template' for UsersController:Class:
+
+Started POST "/__better_errors/003321c3d1b21ad4/variables" for ::1 at 2023-10-04 16:17:17 -0400
+Started GET "/" for ::1 at 2023-10-04 16:19:30 -0400
+
+NoMethodError - undefined method `action_encoding_template' for UsersController:Class:
+
+Started POST "/__better_errors/5ac4fb7b7d3ac048/variables" for ::1 at 2023-10-04 16:19:30 -0400
+Started GET "/users/new" for ::1 at 2023-10-04 16:19:37 -0400
+
+NoMethodError - undefined method `action_encoding_template' for UsersController:Class:
+
+Started GET "/users/new" for ::1 at 2023-10-04 16:19:37 -0400
+
+NoMethodError - undefined method `action_encoding_template' for UsersController:Class:
+
+Started POST "/__better_errors/d046f76bb4308a24/variables" for ::1 at 2023-10-04 16:19:37 -0400
+Started GET "/users" for ::1 at 2023-10-04 16:21:00 -0400
+
+NoMethodError - undefined method `action_encoding_template' for UsersController:Class:
+
+Started POST "/__better_errors/0dff8532efe7d31e/variables" for ::1 at 2023-10-04 16:21:00 -0400
+Started GET "/users" for ::1 at 2023-10-04 16:22:27 -0400
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 4485)
+
+
+
+ActionView::MissingTemplate - Missing template users/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in:
+  * "/Users/claudiaaziz/Desktop/W7D3/practice-for-ch-rails-goal-app-long-practice-main/goal_app/app/views"
+  * "/Users/claudiaaziz/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/turbo-rails-1.4.0/app/views"
+Did you mean?  layouts/users/index
+               layouts/turbo_rails/frame
+               layouts/application:
+  app/controllers/users_controller.rb:4:in `index'
+
+Started POST "/__better_errors/eff36725fd93244c/variables" for ::1 at 2023-10-04 16:22:27 -0400
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):73:in `block in render_template'
+Started GET "/users" for ::1 at 2023-10-04 16:23:09 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 4809)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 4909)
+Completed 500 Internal Server Error in 662ms (ActiveRecord: 0.4ms | Allocations: 966479)
+
+
+
+NoMethodError - undefined method `username' for nil:NilClass:
+  app/views/users/index.html.erb:4
+  app/views/users/index.html.erb:3
+  app/controllers/users_controller.rb:4:in `index'
+
+Started POST "/__better_errors/0d4867d30b6d92d3/variables" for ::1 at 2023-10-04 16:23:09 -0400
+Started GET "/users" for ::1 at 2023-10-04 16:23:41 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 838)
+  Rendered layout layouts/application.html.erb (Duration: 124.0ms | Allocations: 46236)
+Completed 200 OK in 130ms (Views: 128.0ms | ActiveRecord: 0.6ms | Allocations: 47297)
+
+
+Started GET "/users/new" for ::1 at 2023-10-04 16:29:34 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 238)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1814)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 2903)
+
+
+Started GET "/users/new" for ::1 at 2023-10-04 16:30:21 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1753)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 2748)
+
+
+Started GET "/users/method=?users%5Busername%5D=claudia&users%5Bpassword%5D=[FILTERED]" for ::1 at 2023-10-04 16:30:38 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/c1ab240a2c5be765/variables" for ::1 at 2023-10-04 16:30:38 -0400
+Started GET "/users/method=?users%5Busername%5D=claudia&users%5Bpassword%5D=[FILTERED]" for ::1 at 2023-10-04 16:32:05 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/02ad0b69ead0c5b9/variables" for ::1 at 2023-10-04 16:32:05 -0400

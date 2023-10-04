@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
     helper_method :current_user
-    
+
     #CHRLLL
 
     def current_user
         # if a current user already exists return it else find the user in the data base w the session token
-        @current_user ||= User.find_by(session: session[:session_token])
+        @current_user ||= User.find_by(session_token: session[:session_token])
     end
 
     def require_logged_in
@@ -29,7 +29,6 @@ class ApplicationController < ActionController::Base
 
     def login(user)
         session[:session_token] = user.reset_session_token! 
-        # if logged_out?
     end
 
     def logged_in?
